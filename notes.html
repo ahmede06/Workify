@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workify - Page Name</title>
@@ -25,7 +26,7 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -36,14 +37,21 @@
                 <li><a href="reminders.html">Reminders</a></li>
             </ul>
         </nav>
+        <hr class="navbar-line">
     </header>
 
-    <main>
-        <h2>My Notes</h2>
-        <ul>
+    <main class = "center">
+
+        <div class="notes-header">
+            <h1>My Notes</h1>
+            <button class="add-notes-button">Add Note</button>
+        </div>
+        <ul class="notes-list">
             <li>Meeting with team at 10 AM.</li>
             <li>Submit project report by Friday.</li>
         </ul>
+
+
     </main>
 
     <footer>

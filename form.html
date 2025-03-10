@@ -2,13 +2,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workify - Form</title>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -19,17 +20,18 @@
                 <li><a href="reminders.html">Reminders</a></li>
             </ul>
         </nav>
+        <hr class="navbar-line">
     </header>
 
-    <main>
-        <h2>Create a Reminder</h2>
+    <main class = "center">
+        <h1>Feedback Form</h1>
         <form>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name"><br><br>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email"><br><br>
-            <label for="reminder">Reminder:</label>
-            <textarea id="reminder" name="reminder"></textarea><br><br>
+            <label for="Feedback">Feedback:</label>
+            <textarea id="Feedback" name="Feedback"></textarea><br><br>
             <input type="submit" value="Submit">
         </form>
     </main>

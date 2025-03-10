@@ -3,13 +3,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workify - Calendar</title>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -20,12 +21,13 @@
                 <li><a href="reminders.html">Reminders</a></li>
             </ul>
         </nav>
+        <hr class="navbar-line">
     </header>
 
-    <main>
-        <h2>My Calendar</h2>
-        <table border="1">
-            <tr>
+    <main class = "center">
+        <h1 class="calendar-title">My Calendar</h1>
+        <table border="1" class="calendar">
+            <tr class="day-names">
                 <th>Sun</th>
                 <th>Mon</th>
                 <th>Tue</th>
@@ -34,49 +36,49 @@
                 <th>Fri</th>
                 <th>Sat</th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
+            <tr class="day-nums">
+                <td><span class="calendar-button">1</span></td>
+                <td><span class="calendar-button">2</span></td>
+                <td><span class="calendar-button">3</span></td>
+                <td><span class="calendar-button">4</span></td>
+                <td><span class="calendar-button">5</span></td>
+                <td><span class="calendar-button">6</span></td>
+                <td><span class="calendar-button">7</span></td>
             </tr>
-            <tr>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-                <td>11</td>
-                <td>12</td>
-                <td>13</td>
-                <td>14</td>
+            <tr class="day-nums">
+                <td><span class="calendar-button">8</span></td>
+                <td><span class="calendar-button">9</span></td>
+                <td><span class="calendar-button">10</span></td>
+                <td><span class="calendar-button">11</span></td>
+                <td><span class="calendar-button">12</span></td>
+                <td><span class="calendar-button">13</span></td>
+                <td><span class="calendar-button">14</span></td>
             </tr>
-            <tr>
-                <td>15</td>
-                <td>16</td>
-                <td>17</td>
-                <td>18</td>
-                <td>19</td>
-                <td>20</td>
-                <td>21</td>
+            <tr class="day-nums">
+                <td><span class="calendar-button">15</span></td>
+                <td><span class="calendar-button">16</span></td>
+                <td><span class="calendar-button">17</span></td>
+                <td><span class="calendar-button">18</span></td>
+                <td><span class="calendar-button">19</span></td>
+                <td><span class="calendar-button">20</span></td>
+                <td><span class="calendar-button">21</span></td>
             </tr>
-            <tr>
-                <td>22</td>
-                <td>23</td>
-                <td>24</td>
-                <td>25</td>
-                <td>26</td>
-                <td>27</td>
-                <td>28</td>
+            <tr class="day-nums">
+                <td><span class="calendar-button">22</span></td>
+                <td><span class="calendar-button">23</span></td>
+                <td><span class="calendar-button">24</span></td>
+                <td><span class="calendar-button">25</span></td>
+                <td><span class="calendar-button">26</span></td>
+                <td><span class="calendar-button">27</span></td>
+                <td><span class="calendar-button">28</span></td>
             </tr>
-            <tr>
-                <td>29</td>
-                <td>30</td>
-                <td>31</td>
+            <tr class="day-nums">
+                <td><span class="calendar-button">29</span></td>
+                <td><span class="calendar-button">30</span></td>
+                <td><span class="calendar-button">31</span></td>
             </tr>
-            <!-- Add more rows for the calendar -->
         </table>
+        
     </main>
 
     <footer>

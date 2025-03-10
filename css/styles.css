@@ -1,0 +1,194 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
+.menu ul {
+list-style-type: none;
+display: flex;
+justify-content: center;
+
+}
+
+.menu ul li {
+margin: 0 15px;
+}
+
+.menu ul li a {
+    color: #F55836;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    height: 100vh; 
+    margin-top: 100px;
+}
+
+.start-text {
+    margin-top: 0px;
+    padding-top: 0px;
+    
+}
+
+h1,h2,h3 {
+    color: #F55836;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.wrapimg {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: left;
+}
+
+.center_wrapped_text {
+    text-align: left;
+    margin-left: 80px;
+}
+
+#quote {
+    color: orange;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.calendar {
+
+    width: 80%; 
+    margin: 20px auto;
+}
+
+
+.day-names th {
+    padding: 10px; 
+    text-align: center; 
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.day-nums td {
+    padding: 40px; 
+    text-align: center; 
+    font-size: 24px;
+}
+
+.calendar-button {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #F55836;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.calendar-button:hover {
+    background-color: #d4300b; /
+}
+
+.center > .calendar-title {
+    margin-top: -35px;
+}
+
+.work {
+    width: 500px;
+    height: 350px;
+    margin: 5px;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px black;
+    float: right;
+}
+
+
+.navbar-line {
+    border: 1px solid #F55836; 
+    width: 50%;
+    margin: 0 auto; 
+}
+
+.reminder-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 80%; 
+    max-width: 600px; 
+}
+
+.notes-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 80%; 
+    max-width: 600px; 
+}
+
+
+.add-reminder-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #F55836;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.add-notes-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #F55836;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.reminder-list {
+    width: 80%;
+    max-width: 600px;
+    padding: 0;
+   
+}
+
+.notes-list {
+    width: 80%;
+    max-width: 600px;
+    padding: 0;
+   
+}
+
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+   
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.business-cite {
+    position: absolute;
+    right: 430px;
+    top: 700px;
+}
