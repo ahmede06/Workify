@@ -1,9 +1,9 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/calendarhandler.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workify - Calendar</title>
@@ -24,7 +24,13 @@
         <hr class="navbar-line">
     </header>
 
-    <main class = "center">
+    <a href="index.html" class="recycling-link">
+        <div class="recycling-icon">
+            <i class="fas fa-recycle"> Workify</i>
+        </div>
+    </a>
+
+    <main class="center">
         <h1 class="calendar-title">My Calendar</h1>
         <table border="1" class="calendar">
             <tr class="day-names">
@@ -37,51 +43,66 @@
                 <th>Sat</th>
             </tr>
             <tr class="day-nums">
-                <td><span class="calendar-button">1</span></td>
-                <td><span class="calendar-button">2</span></td>
-                <td><span class="calendar-button">3</span></td>
-                <td><span class="calendar-button">4</span></td>
-                <td><span class="calendar-button">5</span></td>
-                <td><span class="calendar-button">6</span></td>
-                <td><span class="calendar-button">7</span></td>
+                <td><span class="calendar-button" data-day="1">1</span></td>
+                <td><span class="calendar-button" data-day="2">2</span></td>
+                <td><span class="calendar-button" data-day="3">3</span></td>
+                <td><span class="calendar-button" data-day="4">4</span></td>
+                <td><span class="calendar-button" data-day="5">5</span></td>
+                <td><span class="calendar-button" data-day="6">6</span></td>
+                <td><span class="calendar-button" data-day="7">7</span></td>
             </tr>
             <tr class="day-nums">
-                <td><span class="calendar-button">8</span></td>
-                <td><span class="calendar-button">9</span></td>
-                <td><span class="calendar-button">10</span></td>
-                <td><span class="calendar-button">11</span></td>
-                <td><span class="calendar-button">12</span></td>
-                <td><span class="calendar-button">13</span></td>
-                <td><span class="calendar-button">14</span></td>
+                <td><span class="calendar-button" data-day="8">8</span></td>
+                <td><span class="calendar-button" data-day="9">9</span></td>
+                <td><span class="calendar-button" data-day="10">10</span></td>
+                <td><span class="calendar-button" data-day="11">11</span></td>
+                <td><span class="calendar-button" data-day="12">12</span></td>
+                <td><span class="calendar-button" data-day="13">13</span></td>
+                <td><span class="calendar-button" data-day="14">14</span></td>
             </tr>
             <tr class="day-nums">
-                <td><span class="calendar-button">15</span></td>
-                <td><span class="calendar-button">16</span></td>
-                <td><span class="calendar-button">17</span></td>
-                <td><span class="calendar-button">18</span></td>
-                <td><span class="calendar-button">19</span></td>
-                <td><span class="calendar-button">20</span></td>
-                <td><span class="calendar-button">21</span></td>
+                <td><span class="calendar-button" data-day="15">15</span></td>
+                <td><span class="calendar-button" data-day="16">16</span></td>
+                <td><span class="calendar-button" data-day="17">17</span></td>
+                <td><span class="calendar-button" data-day="18">18</span></td>
+                <td><span class="calendar-button" data-day="19">19</span></td>
+                <td><span class="calendar-button" data-day="20">20</span></td>
+                <td><span class="calendar-button" data-day="21">21</span></td>
             </tr>
             <tr class="day-nums">
-                <td><span class="calendar-button">22</span></td>
-                <td><span class="calendar-button">23</span></td>
-                <td><span class="calendar-button">24</span></td>
-                <td><span class="calendar-button">25</span></td>
-                <td><span class="calendar-button">26</span></td>
-                <td><span class="calendar-button">27</span></td>
-                <td><span class="calendar-button">28</span></td>
+                <td><span class="calendar-button" data-day="22">22</span></td>
+                <td><span class="calendar-button" data-day="23">23</span></td>
+                <td><span class="calendar-button" data-day="24">24</span></td>
+                <td><span class="calendar-button" data-day="25">25</span></td>
+                <td><span class="calendar-button" data-day="26">26</span></td>
+                <td><span class="calendar-button" data-day="27">27</span></td>
+                <td><span class="calendar-button" data-day="28">28</span></td>
             </tr>
             <tr class="day-nums">
-                <td><span class="calendar-button">29</span></td>
-                <td><span class="calendar-button">30</span></td>
-                <td><span class="calendar-button">31</span></td>
+                <td><span class="calendar-button" data-day="29">29</span></td>
+                <td><span class="calendar-button" data-day="30">30</span></td>
+                <td><span class="calendar-button" data-day="31">31</span></td>
             </tr>
         </table>
-        
+
+       
+        <div id="dayDetailsFrame" class="day-details-frame">
+            <div class="frame-content">
+                <button id="closeFrameButton" class="close-frame-button">Close</button>
+                <h2 id="selectedDayTitle"></h2>
+                <div class="notes-and-reminders">
+                    <h3>Notes:</h3>
+                    <ul id="notesList"></ul>
+                    <button id="addNoteButton">Add Note</button>
+                    <h3>Reminders:</h3>
+                    <ul id="remindersList"></ul>
+                    <button id="addReminderButton">Add Reminder</button>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer>
+    <footer style="margin-top: 200px;">
         <p>&copy; 2024 Workify. All rights reserved.</p>
     </footer>
 </body>

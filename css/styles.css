@@ -3,16 +3,14 @@ body, html {
     padding: 0;
 }
 
-
 .menu ul {
-list-style-type: none;
-display: flex;
-justify-content: center;
-
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
 }
 
 .menu ul li {
-margin: 0 15px;
+    margin: 0 15px;
 }
 
 .menu ul li a {
@@ -32,13 +30,7 @@ margin: 0 15px;
     margin-top: 100px;
 }
 
-.start-text {
-    margin-top: 0px;
-    padding-top: 0px;
-    
-}
-
-h1,h2,h3 {
+h1, h2, h3 {
     color: #F55836;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -71,11 +63,9 @@ p {
 }
 
 .calendar {
-
     width: 80%; 
     margin: 20px auto;
 }
-
 
 .day-names th {
     padding: 10px; 
@@ -102,7 +92,7 @@ p {
 }
 
 .calendar-button:hover {
-    background-color: #d4300b; /
+    background-color: #d4300b; 
 }
 
 .center > .calendar-title {
@@ -119,14 +109,13 @@ p {
     float: right;
 }
 
-
 .navbar-line {
     border: 1px solid #F55836; 
     width: 50%;
     margin: 0 auto; 
 }
 
-.reminder-header {
+.reminder-header, .timer-header {
     display: flex;
     justify-content: space-between; 
     align-items: center; 
@@ -134,16 +123,7 @@ p {
     max-width: 600px; 
 }
 
-.notes-header {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    width: 80%; 
-    max-width: 600px; 
-}
-
-
-.add-reminder-button {
+.add-reminder-button, .add-timer-button {
     padding: 10px 20px;
     font-size: 18px;
     background-color: #F55836;
@@ -167,23 +147,30 @@ p {
     width: 80%;
     max-width: 600px;
     padding: 0;
-   
 }
 
 .notes-list {
     width: 80%;
     max-width: 600px;
     padding: 0;
-   
 }
 
+.notes-list li,
+.reminder-list li {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    word-wrap: break-word;  
+    max-width: 100%;  
+}
 
 li {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 label {
-   
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -191,4 +178,135 @@ label {
     position: absolute;
     right: 430px;
     top: 700px;
+}
+
+.notes-header, .reminder-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 80%; 
+    max-width: 600px; 
+    position: relative; 
+}
+
+.note-container, .reminder-container {
+    position: absolute; 
+    top: 100%; 
+    left: 365px;
+    background: white; 
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: none; 
+    width: 100%;
+    max-width: 300px;
+    word-wrap: break-word;
+}
+
+.note-input, .reminder-input {
+    width: 95%; 
+    height: 100px; 
+    padding: 8px;
+    font-size: 14px;
+}
+
+.confirm-button {
+    padding: 8px 12px;
+    font-size: 18px;
+    background-color: #F55836;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.garbage-bin {
+    display: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: red;
+}
+
+.note-item:hover .garbage-bin {
+    display: inline-block; 
+    
+}
+
+.reminder-item:hover .garbage-bin {
+    display: inline-block; 
+
+}
+
+.close-frame-button {
+    padding: 8px 12px;
+    font-size: 18px;
+    background-color: #F55836;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    align-self: flex-end;
+}
+
+
+#addNoteButton {
+    padding: 8px 12px;
+    font-size: 18px;
+    background-color: #F55836;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+#addReminderButton {
+    padding: 8px 12px;
+    font-size: 18px;
+    background-color: #F55836;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.frame-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.day-details-frame {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+    z-index: 1000;
+}
+
+
+
+.recycling-link {
+    text-decoration: none; 
+    position: absolute; 
+    top: 10px; 
+    left: 25px; 
+}
+
+
+.recycling-icon {
+    font-size: 40px; 
+    color: #F55836; 
+    cursor: pointer;
+}
+
+
+.recycling-icon:hover {
+    color: #d34d2e; 
 }

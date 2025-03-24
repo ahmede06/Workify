@@ -1,8 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/reminderhandler.js" ></script>
+    <script src="js/timerhandler.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workify - Reminders</title>
@@ -23,17 +25,51 @@
         <hr class="navbar-line">
     </header>
 
+    <a href="index.html" class="recycling-link">
+        <div class="recycling-icon">
+            <i class="fas fa-recycle"> Workify</i>
+        </div>
+    </a>
+    
     <main class="center">
         <div class="reminder-header">
             <h1>My Reminders</h1>
             <button class="add-reminder-button">Add Reminder</button>
+            <div class="reminder-container">
+                <textarea class="reminder-input" placeholder="Type your reminder here..."></textarea>
+                <button class="confirm-button">Confirm</button>
+            </div>
         </div>
+
         <ul class="reminder-list">
-            <li>Call John at 3 PM.</li>
-            <li>Buy groceries.</li>
+            <li class="reminder-item">
+                <span class="reminder-text">Check if items are recyclable before disposing of them. ♻️</span>
+                <span class="garbage-bin"><i style="margin-left: 5px;" class="fas fa-trash-alt"></i></span> 
+            </li>
+            <li class="reminder-item">
+                <span class="reminder-text">Avoid plastic straws and cutlery.</span>
+                <span class="garbage-bin"><i style="margin-left: 5px;" class="fas fa-trash-alt"></i></span> 
+            </li>
         </ul>
+
+        <div class="timer-header">
+            <h1>Eco Timer</h1>
+            <button class="add-timer-button" id="add-day">+ 1 Day</button>
+            <button class="add-timer-button" id="add-hour">+ 1 Hour</button>
+            <button class="add-timer-button" id="add-minute">+ 1 Minute</button>
+        </div>
+
+        <div class="timer-header">
+            <button class="add-timer-button" id="timer-start">Start</button>
+            <button class="add-timer-button" id="timer-end">Pause</button>
+            <button class="add-timer-button" id="timer-reset">Reset</button>
+        </div>
+
+        <div>
+            <h2 id="timer-display">00:00:00</h2>
+        </div>
+
     </main>
-    
 
     <footer>
         <p>&copy; 2024 Workify. All rights reserved.</p>
